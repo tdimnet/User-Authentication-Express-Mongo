@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var app = express();
 
 // mongodb connection
-mongoose.connect("mongodb://localhost:27017/bookworm");
+mongoose.connect("mongodb://localhost:27017/bookworm", { useMongoClient: true });
 var db = mongoose.connection;
 
 // mongo error
